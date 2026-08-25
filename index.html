@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Techfest | Cyborg Reality</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #08080c;
+            color: #e2e8f0;
+        }
+        h1, h2, h3, .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+        .glow-cyan:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+        }
+        .text-glow-magenta {
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.7);
+        }
+
+        .cyber-grid {
+            background-image: linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .cyber-card {
+            background: rgba(16, 18, 27, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+        .cyber-card:hover {
+            border-color: rgba(0, 240, 255, 0.8);
+        }
+
+        .cyber-btn {
+            clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="cyber-grid min-h-screen relative overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md border-b border-cyan-500/20 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-microchip text-cyan-400 text-2xl animate-pulse"></i>
+                <span class="font-orbitron font-bold text-xl tracking-widest text-white">TECHFEST<span class="text-cyan-400">.CYBORG</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 font-semibold tracking-wider text-sm uppercase">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">System Info</a>
+                <a href="#events" class="hover:text-cyan-400 transition-colors">Modules</a>
+                <a href="#schedule" class="hover:text-cyan-400 transition-colors">Timeline</a>
+            </nav>
+
+            <a href="#register" class="cyber-btn bg-cyan-500 hover:bg-cyan-400 text-black font-bold font-orbitron px-5 py-2 text-sm glow-cyan uppercase tracking-wider">
+                Initialize Access
+            </a>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 flex items-center justify-center min-h-screen">
+        <div class="max-w-5xl mx-auto text-center z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/60 border border-cyan-500/40 rounded-full mb-6">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                <span class="text-xs font-mono text-cyan-300 tracking-widest uppercase">Protocol 2026 Next-Gen Human Augmentation</span>
+            </div>
+
+            <h1 class="text-4xl md:text-7xl font-black font-orbitron tracking-tight mb-6 leading-tight uppercase">
+                Bridging Human <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-pink-500 text-glow-cyan">
+                    & Machine Intelligence
+                </span>
+            </h1>
+
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-normal">
+                Enter Asia's largest science and technology festival. Experience high-octane robotics, AI orchestration, and cybernetic innovation at IIT Techfest.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#register" class="w-full sm:w-auto cyber-btn bg-cyan-500 hover:bg-cyan-400 text-black font-bold font-orbitron px-8 py-4 text-base glow-cyan uppercase tracking-wider">
+                    Register Augmentation <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#events" class="w-full sm:w-auto cyber-btn border border-cyan-500/50 hover:border-cyan-400 text-cyan-400 hover:bg-cyan-500/10 font-bold font-orbitron px-8 py-4 text-base uppercase tracking-wider transition-all">
+                    Explore Modules
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-12 border-b border-cyan-500/20 pb-4">
+            <div>
+                <h2 class="text-3xl font-bold font-orbitron text-white">Event Competitions</h2>
+            </div>
+            <span class="text-xs font-mono text-slate-500">SYS_STATUS: ACTIVE</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="cyber-card p-6 relative group transition-all duration-300 hover:-translate-y-1">
+                <div class="text-cyan-400 text-3xl mb-4">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white font-orbitron mb-2">RoboWars Supreme</h3>
+                <p class="text-slate-400 text-sm mb-6">Heavyweight cybernetic combat arena. Armor, weaponry, and neural-driven control systems clash for dominance.</p>
+                <div class="flex justify-between items-center pt-4 border-t border-slate-800">
+                    <span class="text-xs font-mono text-pink-500 font-bold">PRIZE: ₹2,50,000</span>
+                    <a href="#" class="text-cyan-400 text-xs font-bold uppercase tracking-widest group-hover:underline">Deploy <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <div class="cyber-card p-6 relative group transition-all duration-300 hover:-translate-y-1">
+                <div class="text-pink-500 text-3xl mb-4">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white font-orbitron mb-2">AI Agent Hackathon</h3>
+                <p class="text-slate-400 text-sm mb-6">Build autonomous, multi-agent frameworks to solve complex real-world challenges in real time.</p>
+                <div class="flex justify-between items-center pt-4 border-t border-slate-800">
+                    <span class="text-xs font-mono text-pink-500 font-bold">PRIZE: ₹3,00,000</span>
+                    <a href="#" class="text-cyan-400 text-xs font-bold uppercase tracking-widest group-hover:underline">Deploy <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <div class="cyber-card p-6 relative group transition-all duration-300 hover:-translate-y-1">
+                <div class="text-cyan-400 text-3xl mb-4">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white font-orbitron mb-2">Cyber Defense Grid</h3>
+                <p class="text-slate-400 text-sm mb-6">Capture The Flag (CTF) security challenge. Test your offensive and defensive exploits in simulated networks.</p>
+                <div class="flex justify-between items-center pt-4 border-t border-slate-800">
+                    <span class="text-xs font-mono text-pink-500 font-bold">PRIZE: ₹1,80,000</span>
+                    <a href="#" class="text-cyan-400 text-xs font-bold uppercase tracking-widest group-hover:underline">Deploy <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="border-t border-cyan-500/20 bg-black/80 py-8 px-6 text-center text-xs text-slate-500 font-mono">
+        <p>© 2026 IIT TECHFEST</p>
+    </footer>
+
+</body>
+</html>
